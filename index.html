@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Hi.</title>
     <link rel="stylesheet" href="freza.css">
+    <head>
     <style>
       body {
         background-color: #ffe6ea;
@@ -14,8 +15,7 @@
         color: black;
         margin-bottom: 20px;
         text-align: center;
-        font-family: cursive
-        ;
+        font-family: cursive;
       }
       button {
         background-color: #ff4d6d;
@@ -61,15 +61,26 @@
     </style>
   </head>
   <body>
+    <div class="slideshow-container">
+      <img src="IMG-20230301-WA0053.jpg" class="slides">
+      <img src="Snapchat-1682214205.jpg" class="slides">
+      <img src="Snapchat-1811806099.jpg" class="slides">
+    </div>
+    
+    <button class="prev" onclick="plusSlides(-1)">Previous</button>
+    <button class="next" onclick="plusSlides(1)">Next</button>
     <h1 id="message"></h1>
     <button id="button">Click hehe...</button>
+    <audio id="music" src="Ambarsariya 128 Kbps (mp3cut.net).mp3"></audio>
     <script>
       var messageLabel = document.getElementById("message");
       var button = document.getElementById("button");
+      var music = document.getElementById("music");
 
       button.addEventListener("click", function() {
         messageLabel.innerText = "I missed you freza my babu";
         animateHearts();
+        playMusic();
       });
 
       function animateHearts() {
@@ -86,8 +97,11 @@
       heart.remove();
         }, 4000);
       }
-    }  
+    }
+    function playMusic() {
+        music.play();
+      }  
     </script>
-    <script src="freza.js"></script>
+    <link rel="stylesheet" href="freza.js">
   </body>
 </html>
