@@ -1,0 +1,43 @@
+.heart {
+  position: absolute;
+  font-size: 24px;
+  color: #ff4d6d;
+  text-shadow: 0 0 5px #ff1a4f;
+  transform: rotate(-45deg);
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url("cat-hugs.webp  ");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+} 
+body {
+  background-color: #ffe6ea;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  font-size: 36px;
+  color: black ;
+  margin-bottom: 20px;
+  text-align: center;
+}
+button {
+  background-color: #ff4d6d;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: block;
+  margin: 0 auto;
+}
+button:hover {
+  background-color: #ff1a4f;
+}

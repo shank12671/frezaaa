@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hi.</title>
+    <link rel="stylesheet" href="freza.css">
+    <style>
+      body {
+        background-color: #ffe6ea;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        font-size: 45px;
+        color: black;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: cursive
+        ;
+      }
+      button {
+        background-color: #ff4d6d;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        display: block;
+        margin: 0 auto;
+      }
+      button:hover {
+        background-color: #ff1a4f;
+      }
+      .heart {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        animation: heart 3s linear infinite;
+        opacity: 90%;
+      }
+      @keyframes heart {
+        0% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 1;
+          transform: translate(-50%, 50%);
+        }
+        75% {
+          opacity: 1;
+          transform: translate(-50%, 100%);
+        }
+        100% {
+          opacity: 0;
+          transform: translate(-50%, 150%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="message"></h1>
+    <button id="button">Click hehe...</button>
+    <script>
+      var messageLabel = document.getElementById("message");
+      var button = document.getElementById("button");
+
+      button.addEventListener("click", function() {
+        messageLabel.innerText = "I missed you freza my babu";
+        animateHearts();
+      });
+
+      function animateHearts() {
+  for (var i = 0; i < 10; i++) {
+    var heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.style.left = (Math.random() * window.innerWidth) + 'px';
+    heart.style.top = (Math.random() * window.innerHeight) + 'px';
+    heart.style.fontSize = (Math.random() * 90 + 10) + 'px';
+    heart.innerText = '❤️';
+    document.body.appendChild(heart);
+
+    setTimeout(function() {
+      heart.remove();
+        }, 4000);
+      }
+    }  
+    </script>
+    <script src="freza.js"></script>
+  </body>
+</html>
